@@ -1,4 +1,4 @@
-package ru.capper2.sale;
+package ru.capper2.sale.dao;
 
 import java.io.IOException;
 import java.net.URI;

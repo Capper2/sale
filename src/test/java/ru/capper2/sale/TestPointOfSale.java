@@ -2,6 +2,7 @@ package ru.capper2.sale;
 
 import org.junit.Before;
 import org.junit.Test;
+import ru.capper2.sale.dao.PointOfSaleImplInMemory;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

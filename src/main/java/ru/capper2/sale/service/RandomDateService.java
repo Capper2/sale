@@ -1,4 +1,4 @@
-package ru.capper2.sale;
+package ru.capper2.sale.service;
 
 import java.time.LocalDateTime;
 import java.time.Month;
