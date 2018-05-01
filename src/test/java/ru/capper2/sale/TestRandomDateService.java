@@ -1,13 +1,10 @@
 package ru.capper2.sale;
 
-import com.pholser.junit.quickcheck.Property;
-import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.time.DateTimeException;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 public class TestRandomDateService {
 
