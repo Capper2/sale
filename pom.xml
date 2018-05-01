@@ -18,6 +18,9 @@
 
         <slf4j.version>1.7.25</slf4j.version>
         <logback-classic.version>1.2.3</logback-classic.version>
+
+        <junit.version>4.12</junit.version>
+        <junit-quickcheck.version>0.8</junit-quickcheck.version>
     </properties>
 
     <dependencies>
@@ -34,6 +37,27 @@
             <version>${logback-classic.version}</version>
         </dependency>
 
+
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.pholser</groupId>
+            <artifactId>junit-quickcheck-core</artifactId>
+            <version>${junit-quickcheck.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.pholser</groupId>
+            <artifactId>junit-quickcheck-generators</artifactId>
+            <version>${junit-quickcheck.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -45,6 +69,17 @@
                     <excludes>
                         <exclude>**/logback.xml</exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19</version>
+                <configuration>
+                    <includes>
+                        <include>**/PBT*.java</include>
+                        <include>**/Test*.java</include>
+                    </includes>
                 </configuration>
             </plugin>
             <plugin>
