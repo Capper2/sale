@@ -28,4 +28,4 @@ java -jar target\sale-jar-with-dependencies.jar
 
 ## License
 
-[MIT License](LICENSE.md)
+[MIT License](LICENSE)
