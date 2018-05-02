@@ -17,7 +17,7 @@ mvn -version
 ### Запуск
 
 ```
-java -jar target\sale-jar-with-dependencies.jar
+java -jar target\sale-jar-with-dependencies.jar -o "src\test\resources\offices.txt" -oc 90000 -of result.csv
 ```
 
 ### Настройки
