@@ -14,8 +14,6 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class ApplicationSale {
@@ -45,7 +43,7 @@ public class ApplicationSale {
             LOGGER.error("Argument \"operations-count\" must be a number.");
             System.exit(1);
         }
-        r.createSaleDataInFile(count);
+        r.createRandomDataAndSaveInFile(count);
 
         LOGGER.info("Application finished.");
     }

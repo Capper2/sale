@@ -20,7 +20,7 @@ public class RandomGenerateSaleData {
         this.randomSumService = randomSumService;
     }
 
-    public void createSaleDataInFile(long numberOfOperations) {
+    public void createRandomDataAndSaveInFile(long numberOfOperations) {
         List<Operation> list = new ArrayList<>();
         for (int i = 0; i < numberOfOperations; i++) {
             Operation operation = new Operation(
