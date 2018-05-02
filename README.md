@@ -32,7 +32,7 @@ java -jar sale-group\target\task2-jar-with-dependencies.jar -gd sums-by-dates.tx
 
  * настройка логгирования
  
- `-Dlogback.configurationFile="path/to/project/src/main/resources/logback.xml"`
+ `-Dlogback.configurationFile="path/to/project/sale-generator/src/main/resources/logback.xml"`
 
 ## License
 
