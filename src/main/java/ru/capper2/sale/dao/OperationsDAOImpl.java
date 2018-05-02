@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class OperationsDAOImpl implements OperationsDAO {
+public class OperationsDAOImpl extends FileDao implements OperationsDAO {
     private static final Logger LOGGER = LoggerFactory.getLogger(OperationsDAOImpl.class);
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy;HH:mm");
     private final Path file;
@@ -36,12 +36,7 @@ public class OperationsDAOImpl implements OperationsDAO {
                 .append(operation.getNumder()).append(";")
                 .append(operation.getSum()).append(";");
 
-
-        try {
-            Files.write(file, Collections.singleton(sb.toString()), StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-        } catch (IOException e) {
-            LOGGER.error(e.getMessage(), e);
-        }
+        super.saveStringToFile(file, sb.toString());
     }
 
     @Override
@@ -56,14 +51,7 @@ public class OperationsDAOImpl implements OperationsDAO {
                                 .toString()
                 )
                 .collect(Collectors.toList());
-        try {
-            if (Files.deleteIfExists(file))
-                LOGGER.info("File \"{}\" was deleted.", file.toAbsolutePath().toString());
-            LOGGER.info("File \"{}\" was created.", file.toAbsolutePath().toString());
-            Files.write(file, collect, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-        } catch (IOException e) {
-            LOGGER.error(e.getMessage(), e);
-        }
+        super.saveCollectionToFile(file, collect);
     }
 
     @Override
