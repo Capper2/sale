@@ -59,7 +59,6 @@ public class ApplicationSale {
 
         Option countOperations = new Option("oc", "operations-count", true, "90000");
         countOperations.setRequired(true);
-        countOperations.setType(Long.class);
         options.addOption(countOperations);
 
 
