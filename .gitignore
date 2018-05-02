@@ -25,3 +25,6 @@ target
 .idea
 *.iml
 result.csv
+operations.csv
+sums-by-dates.txt
+sums-by-offices.txt
