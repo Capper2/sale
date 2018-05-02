@@ -17,10 +17,7 @@ public class PointOfSaleImplInMemory implements PointOfSaleDAO {
     public PointOfSaleImplInMemory(URI fileName) throws IOException {
 
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
-            Set<String> collect = stream
-//                    .filter(s -> s != null && !s.isEmpty())
-                    .collect(Collectors.toSet());
-
+            Set<String> collect = stream.collect(Collectors.toSet());
             this.pointOfSale = new ArrayList<>(collect);
         }
     }
