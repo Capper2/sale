@@ -21,6 +21,7 @@
 
         <junit.version>4.12</junit.version>
         <junit-quickcheck.version>0.8</junit-quickcheck.version>
+        <mockito.version>2.18.3</mockito.version>
     </properties>
 
 	<modules>
