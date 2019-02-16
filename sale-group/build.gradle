@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+}
+
+mainClassName = 'ru.capper2.sale.ApplicationGroupSale'
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Main-Class': "$mainClassName"
+        )
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    compile project(':sale-general')
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+}

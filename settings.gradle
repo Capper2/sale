@@ -1,0 +1,4 @@
+rootProject.name = 'sale'
+include 'sale-general'
+include 'sale-generator'
+include 'sale-group'
