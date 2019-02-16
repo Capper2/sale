@@ -18,12 +18,25 @@ subprojects {
     repositories {
         jcenter()
     }
-    
-    apply plugin: 'java-library'
+
     apply plugin: 'idea'
 
+    apply plugin: 'java'
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
+
+    apply plugin: 'checkstyle'
+    checkstyle {
+        toolVersion '8.17'
+        configFile file("../config/checkstyle/checkstyle.xml")
+    }
+    checkstyleMain {
+        source = 'src/main/java'
+    }
+    checkstyleTest {
+        source = 'src/test/java'
+        enabled = false
+    }
 
     dependencies {
         implementation "commons-cli:commons-cli:${commonsCliVersion}"
@@ -34,4 +47,5 @@ subprojects {
         testImplementation "com.pholser:junit-quickcheck-generators:${junitQuickcheckVersion}"
     }
 }
+
 
