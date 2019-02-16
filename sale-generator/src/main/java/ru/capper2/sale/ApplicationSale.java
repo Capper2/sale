@@ -37,7 +37,7 @@ public class ApplicationSale {
 
     long count = 0;
     try {
-      count = Long.valueOf(options.get("operations-count"));
+      count = Long.parseLong(options.get("operations-count"));
     } catch (NumberFormatException nfe) {
       LOGGER.error("Argument \"operations-count\" must be a number.");
       System.exit(1);
