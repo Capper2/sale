@@ -6,7 +6,6 @@
 
 Для сборки проекта необходимы JDK8:
 * [JDK8](http://www.oracle.com/technetwork/java/javase/downloads/2133151)
-* [Maven](https://maven.apache.org/)
 
 Maven или Gradle:
 * [Maven](https://maven.apache.org/)
